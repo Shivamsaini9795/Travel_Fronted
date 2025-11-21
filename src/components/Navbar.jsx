@@ -27,8 +27,11 @@ export default function Navbar() {
       <div className="w-full flex justify-between items-center shadow-md px-4 py-3 bg-[#E8F8FF] fixed top-0 z-50">
 
         {/* Website Name + Menu Icon */}
-        <div className="flex items-center gap-4 font-bold text-xl text-blue-600">
-        
+        <div
+          className={`flex items-center gap-4 font-bold text-xl text-blue-600 
+                      transition-all duration-300`}
+          style={{ marginLeft: isOpen ? "16rem" : "0" }} // Shift text when sidebar opens
+        >
           {/* Menu Icon */}
           <span className="text-3xl cursor-pointer" onClick={() => setIsOpen(true)}>
             &#9776;

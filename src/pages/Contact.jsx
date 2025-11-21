@@ -20,13 +20,18 @@ const Contact = () => {
     setStatus("");
 
     try {
-      const res = await axios.post("http://localhost:9191/api/contact/send", form);
+      // ✅ Backend URL
+      const res = await axios.post(
+        "http://localhost:9191/api/contact/send",
+        form
+      );
 
       if (res.status === 200) {
         setStatus("Message Sent Successfully!");
         setForm({ name: "", email: "", phone: "", message: "" });
       }
     } catch (err) {
+      console.error(err.response || err.message);
       setStatus("Failed to Send Message!");
     }
   };
