@@ -123,7 +123,7 @@ const Contact = () => {
             <div>
               <label className="font-semibold">Mobile_No:</label>
               <input
-                type="number"
+                type="tel"
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
@@ -172,14 +172,14 @@ const Contact = () => {
       </div>
 
       {/* Google Map */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <iframe
           className="w-full h-[500px] md:h-[600px]"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14232.076643018974!2d80.9546435!3d26.902887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1727021308476!5m2!1sen!2sin"
           allowFullScreen=""
           loading="lazy"
         ></iframe>
-      </div>
+      </div> */}
 
     </div>
   );
